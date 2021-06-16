@@ -157,10 +157,10 @@ public final class Engine implements AutoCloseable {
     ClasspathException, ContradictionException {
     	try {
     		//checks that the version of the meta-level JRE is ok
-    		final String javaVersion = System.getProperty("java.version");
-    		if (!javaVersion.startsWith("1.8.0")) {
-    			throw new InitializationException("JBSE requires to be run on a Java 8 JVM.");
-    		}
+//    		final String javaVersion = System.getProperty("java.version");
+//    		if (!javaVersion.startsWith("1.8.0")) {
+//    			throw new InitializationException("JBSE requires to be run on a Java 8 JVM.");
+//    		}
 
     		//steps
     		final Action_START algo = this.ctx.dispatcher.selectStart();

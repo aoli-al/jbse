@@ -73,18 +73,10 @@ final class FilesMapper implements Cloneable {
     	}
     	
     	//opens the null file
-		try {
-			if (FILEDESCRIPTOR_HANDLE == null) {
-				//macOS and Linux
-				INPUT_NULL = new FileInputStream(NULL_FILE_POSIX);
-				OUTPUT_NULL = new FileOutputStream(NULL_FILE_POSIX);
-				ERROR_NULL = new FileOutputStream(NULL_FILE_POSIX);
-			} else {
-				//Windows
-				INPUT_NULL = new FileInputStream(NULL_FILE_WINDOWS);
-				OUTPUT_NULL = new FileOutputStream(NULL_FILE_WINDOWS);
-				ERROR_NULL = new FileOutputStream(NULL_FILE_WINDOWS);
-			}
+        try {
+            INPUT_NULL = new FileInputStream(NULL_FILE_POSIX);
+            OUTPUT_NULL = new FileOutputStream(NULL_FILE_POSIX);
+            ERROR_NULL = new FileOutputStream(NULL_FILE_POSIX);
 		} catch (FileNotFoundException e) {
 			throw new UnexpectedInternalException(e);
 		}
